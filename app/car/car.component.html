@@ -1,0 +1,12 @@
+<div class="container col-md-4 offset-0 float-left" id="carcm">
+    <div class="" *ngFor="let car of carData">
+
+    <img src="{{car.Images}}" alt="images" height="300px" width="400px" (click)="sendata(car)">
+    <h2>{{car.name}}</h2>
+
+</div>
+</div>
+
+
+        <app-cardetails [data]='cardata'></app-cardetails>
+

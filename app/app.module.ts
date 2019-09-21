@@ -1,31 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule} from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AddTaskComponent } from './add-task/add-task.component';
-import { ViewTaskComponent } from './view-task/view-task.component';
-import { HeaderComponent } from './header/header.component';
+import { CarComponent } from './car/car.component';
+import { CardetailsComponent } from './cardetails/cardetails.component';
 import { from } from 'rxjs';
-import { DataServicesService } from './data-services.service';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddTaskComponent,
-    ViewTaskComponent,
+    CarComponent,
+    CardetailsComponent,
     HeaderComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
+    AppRoutingModule,
     RouterModule.forRoot([
-      {path:'AddTask',component:AddTaskComponent},
-      {path:'ViewTask',component:ViewTaskComponent}
+      {path:'car',component:CarComponent},
+      {path:'cardetails',component:CardetailsComponent}
     ])
   ],
-  providers: [DataServicesService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
